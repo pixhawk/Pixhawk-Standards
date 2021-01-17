@@ -11,7 +11,7 @@ The drone standards (DS) documents are organized as follows:
  - DS-012: Pixhawk Autopilot v6X Standard (in draft)
  - DS-013: Pixhawk Smart Battery Standard (in draft)
  - DS-014: Pixhawk Payload Bus Standard (in draft)
- - DS-015: 【Pixhawk CAN Drone Message set】（https://github.com/Dronecode/SIG-CAN-Drone） 
+ - DS-015: https://github.com/Dronecode/SIG-CAN-Drone 
  - DS-016: Pixhawk Autopilot v6U Standard (in draft)
  - DS-017++: Reserved for future use 
 
