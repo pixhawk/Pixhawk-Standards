@@ -50,7 +50,7 @@ HWTYPE = {v5/6x}{VER}{REV}
 | 0x004 | resistors |     |
 | 0x005 | resistors |     |
 | 0x006 | resistors |     |
-| 0x007 | resistors | FMUv5x wild card (scan sensors) |
+| 0x007 | resistors | not a board -> use EEPROM for REV |
 | 0x009 | resistors |     |
 | 0x00a | resistors |     |
 | 0x010 | EEPROM |     |
