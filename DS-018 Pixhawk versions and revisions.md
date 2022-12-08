@@ -70,4 +70,4 @@ HWTYPE = {v5/6x}{VER}{REV}
 | 0x007 | resistors | not a board → use EEPROM for REV |
 | 0x009 | resistors |     |
 | 0x00a | resistors |     |
-| 0x010 | EEPROM | tbd |
+| 0x010 | EEPROM | Auterion FMUv6x 0.6.0  |
