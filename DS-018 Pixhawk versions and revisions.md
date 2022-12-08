@@ -36,7 +36,7 @@ HWTYPE = {v5/6x}{VER}{REV}
 | 0x007 | resistors | not a board → use EEPROM for VER |
 | 0x009 | resistors | Skynode with USB to FMU |
 | 0x00a | resistors | Skynode base RC9 & older (no usb) |
-| 0x010 | EEPROM | Auterion Skynode RC11, RC12, RC13 |
+| 0x010 | EEPROM | Auterion Skynode RC10, RC11, RC12, RC13 |
 
 ### FMU v5x revisions
 
