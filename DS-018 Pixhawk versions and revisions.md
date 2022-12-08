@@ -43,8 +43,8 @@ HWTYPE = {v5/6x}{VER}{REV}
 |     |     |     |
 | --- | --- | --- |
 | **Value** | **Encoded by** | **FMU v5x REVISION** |
-| 0x000 | resistors | FMUv5x RC13 (baro on I2C4) |
-| 0x001 | resistors | FMUv5x RC15 (baro on I2C2) |
+| 0x000 | resistors | FMUv5x RC13 (baro2 on I2C4) |
+| 0x001 | resistors | FMUv5x RC15 (baro2 on I2C2) |
 | 0x002 | resistors | FMUv5x rev 2 sensor set |
 | 0x003 | resistors | FMUv5x rev 3 sensor set |
 | 0x004 | resistors |     |
