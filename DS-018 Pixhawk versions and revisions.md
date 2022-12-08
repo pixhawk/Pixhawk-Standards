@@ -63,8 +63,8 @@ HWTYPE = {v5/6x}{VER}{REV}
 | 0x000 | resistors |     |
 | 0x001 | resistors | tbd |
 | 0x002 | resistors |     |
-| 0x003 | resistors |     |
-| 0x004 | resistors |     |
+| 0x003 | resistors | Holybro FMUv6x rev3 |
+| 0x004 | resistors | Holybro FMUv6x rev4 |
 | 0x005 | resistors |     |
 | 0x006 | resistors |     |
 | 0x007 | resistors | not a board → use EEPROM for REV |
