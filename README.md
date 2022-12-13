@@ -14,5 +14,5 @@ The drone standards (DS) documents are organized as follows:
  - DS-015: https://github.com/Dronecode/SIG-CAN-Drone (in draft)
  - DS-016: Pixhawk Autopilot v6U Standard (in draft)
  - DS-017++: Reserved for future use
- - DS-018: Ppixhawk Autopilot v6C Standard
+ - DS-018: Pixhawk Autopilot v6C Standard
 
