@@ -12,7 +12,8 @@ The REV and VER are determined by an ADC which reads a voltage divider. The volt
 
 ## Resistor values
 The mapping of the VER/REV number to actual ohmic resistor values for the voltage divider is defined in this section. The diagram shows R1 and R2, with the signals `HW_xxx_SENSE` and `HW_VER_REV_DRIVE`.
-![rev-ver-sensing](../resource/rev-ver-sensing.png)
+
+![rev-ver-sensing](resource/rev-ver-sensing.png)
 
 Config | R1 (K) | R2 (K)
 -- | -- | --
