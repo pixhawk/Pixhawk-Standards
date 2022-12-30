@@ -61,7 +61,7 @@ HWTYPE = {v5/6x}{VER}{REV}
 | --- | --- | --- |
 | **Value** | **Encoded by** | **FMU v5x REVISION** |
 | 0x000 | resistors |     |
-| 0x001 | resistors | tbd |
+| 0x001 | resistors | CUAV v6x |
 | 0x002 | resistors |     |
 | 0x003 | resistors | Holybro FMUv6x rev3 |
 | 0x004 | resistors | Holybro FMUv6x rev4 |
