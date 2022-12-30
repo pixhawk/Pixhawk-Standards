@@ -33,7 +33,7 @@ HWTYPE = {v5/6x}{VER}{REV}
 | 0x004 | resistors | HB CM4 |
 | 0x005 | resistors | HB mini |
 | 0x006 | resistors |     |
-| 0x007 | resistors | not a board → use EEPROM for VER |
+| 0x007 | resistors | Read Version from EEPROM |
 | 0x009 | resistors | Skynode with USB to FMU |
 | 0x00a | resistors | Skynode base RC9 & older (no usb) |
 | 0x010 | EEPROM | Auterion Skynode RC10, RC11, RC12, RC13 |
@@ -50,7 +50,7 @@ HWTYPE = {v5/6x}{VER}{REV}
 | 0x004 | resistors |     |
 | 0x005 | resistors |     |
 | 0x006 | resistors |     |
-| 0x007 | resistors | not a board -> use EEPROM for REV |
+| 0x007 | resistors | Read Revision from EEPROM |
 | 0x009 | resistors |     |
 | 0x00a | resistors |     |
 | 0x010 | EEPROM |     |
@@ -67,7 +67,7 @@ HWTYPE = {v5/6x}{VER}{REV}
 | 0x004 | resistors | Holybro FMUv6x rev4 |
 | 0x005 | resistors |     |
 | 0x006 | resistors |     |
-| 0x007 | resistors | not a board → use EEPROM for REV |
+| 0x007 | resistors | Read Revision from EEPROM |
 | 0x009 | resistors |     |
 | 0x00a | resistors |     |
 | 0x010 | EEPROM | Auterion FMUv6x 0.6.0  |
