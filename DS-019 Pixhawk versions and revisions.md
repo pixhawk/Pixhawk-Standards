@@ -106,7 +106,7 @@ HWTYPE = {v5/6x}{VER}{REV}
 
 |     |     |     |
 | --- | --- | --- |
-| **Value** | **Encoded by** | **FMU v5x REVISION** |
+| **Value** | **Encoded by** | **FMU v6x REVISION** |
 | 0x000 | resistors |     |
 | 0x001 | resistors | CUAV v6x |
 | 0x002 | resistors |     |
