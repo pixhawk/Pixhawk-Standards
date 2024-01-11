@@ -116,7 +116,7 @@ HWTYPE = {v5/6x}{VER}{REV}
 | 0x005 | resistors | ClearSky AVEGA (FMUv6X) |
 | 0x006 | resistors | Holybro FMUv6x rev6 |
 | 0x007 | resistors | Read Revision from EEPROM |
-| 0x008 | resistors |     |
+| 0x008 | resistors | Holybro FMUv6x rev8 |
 | 0x009 | resistors |     |
 | 0x00a | resistors |     |
 | 0x010 | EEPROM | Auterion FMUv6x 0.6.0  |
