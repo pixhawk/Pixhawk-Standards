@@ -84,6 +84,7 @@ HWTYPE = {v5/6x}{VER}{REV}
 | 0x009 | resistors | Auterion Skynode base RC9 & older (no usb) |
 | 0x00a | resistors | Skynode QS no USB |
 | 0x010 | EEPROM | Auterion Skynode RC10, RC11, RC12, RC13 |
+| 0x100 | EEPROM | Holybro Pixhawk Jetson Baseboard |
 
 ### FMU v5x revisions
 
