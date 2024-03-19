@@ -29,8 +29,8 @@ Config | R1 (K) | R2 (K)
 9 | 32.4 | 174
 10 | 24.9 | 442
 
-  | Expected limits | Boundary | Expected voltage | Boundary
--- | -- | -- | -- | --
+|  | Expected limits | Boundary | Expected voltage | Boundary
+| -- | -- | -- | -- | --
 ver/rev | range (DN) | thresholds (DN) | limits (V) | thresholds (V)
 0 | 204 | 0 | 0.166 | 0
   | 553 | 579 | 0.441 | 0.467
@@ -53,15 +53,87 @@ ver/rev | range (DN) | thresholds (DN) | limits (V) | thresholds (V)
 9 | 3827 | 3700 | 3.114 | 2.982
   | 3946 | 4095 | 3.147 | 3.363
 
-## EEPROM logic
-The goal of the Pixhawk community is to make all base boards and FMUs compatible and interchangeable. Since all hardware manufacturers share this same narrow number space, an additional logic was added.
+## EEPROM Logic
+The Pixhawk project aims to make all baseboards and FMUs compatible and interchangeable. Since all hardware manufacturers share this same narrow number space, additional logic was added.
 
-If the VER resistor encodes the value 0x007, this tells the FMU that it needs to access the EEPROM to poll the true version of the base board. This opens up the number space significantly.
+The project is no longer accepting resistor-based REV/VER pairs and is moving all new hardware to use EEPROM logic.
 
-The same logic applies to the REV resistor on the FMU - if it encodes the value 0x007, the true revision of the FMU shall be read from EEPROM.
+If the VER resistor encodes the value 0x007, this tells the FMU that it needs to access the EEPROM to poll the true version of the base board, significantly opening up the number space.
 
-## Addition of a new board
-If a manufacturer wants to introduce a new board - either a base board version or an FMU revision - this desire shall be indicated to the PX4 board support team by issuing a PR to this repository with the respective additions to the [table below](#defined-versions-and-revisions).
+The same logic applies to the REV resistor on the FMU—if it encodes the value 0x007, the FMU's true revision will be read from EEPROM.
+
+## Requesting a Board ID
+If a manufacturer wants to introduce a new board - either a baseboard version or an FMU revision - this desire shall be indicated to the PX4 board support team by issuing a PR to this repository with the respective additions to the [table below](#defined-versions-and-revisions).
+
+The body of the PR needs to include the following details
+
+* HEX board ID
+* Board Name
+* Board Type: base|imu
+* Manufacturer Name
+* Manufacturer Email
+
+## How to set EEPROM ID
+
+Once the requested Board ID has been accepted and the PR has been merged, the Pixhawk SIG team will then generate the files required to set the ID in the EEPROM. The files will be sent via email and are meant to be private to avoid conflicts between manufacturers using same EEPROM values for distinct products.
+
+The Pixhawk SIG team will send manufacturers the following files:
+
+* `[manufacturer name]-[board name]-[base|imu]-[0xnnnn].bin` is an application that programs the EEPROM
+* `[manufacturer name]-[board name]-[base|imu]-[0xnnnn].jlink` is an automation script to program and run the bin file on the target
+
+With these files manufacturers will be capable of setting the Board ID to the requested value. There are two ways to do this, we noted both options below with detailed instructions, we recommend to use the one that fits your production workflow best.
+
+### Option 1: Final Assembly
+
+**Requirements**
+
+* FMUM + BASE connected together
+* JLink + Pixhawk Debug Adapter
+* Computer capable of connecting to JLink console
+* EEPROM Files sent via email
+
+**Steps**
+
+1) Make sure the FMUM and BASE are assembled and connected together.
+2) Hardware is connected to JLink and Console app using a pixhawk debug adapter on a Computer
+3) Hardware is powered ON
+4) Run the *.jlink file
+
+  * `JLinkExe -CommandFile FILENAME-0x0000.jlink`
+  * Console will output success/error messages accordingly
+
+5) Bootloader is loaded on the FMUM
+6) Done
+
+### Option 2: Set Base ID via FMUM
+
+**Requirements**
+
+* An FMUM to be used to program bases
+* JLink + Pixhawk Debug Adapter
+* Computer capable of connecting to JLink console
+* EEPROM Files sent via email
+
+**Steps**
+
+Preparing the FMUM
+
+1) Choose an FMUM 
+2) Connect to JLink + Console
+3) Run the JLink script on the FMUM
+
+  * `JLinkExe -CommandFile FILENAME-0x0000.jlink`
+
+Update Baseboards with FMUM
+
+1) The FMUM tool is installed on a base that needs it’s EEPROM programed.
+2) Base is connected to JLink and console app using a debug adaptor.
+3) Apply power.
+4) See results on Console.
+5) Remove power.
+6) Remove FMUM tool
+7) Repeat.
 
 ## Defined versions and revisions
 
@@ -78,7 +150,7 @@ HWTYPE = {v5/6x}{VER}{REV}
 | 0x003 | resistors | NXP T1 PHY |
 | 0x004 | resistors | HB CM4 |
 | 0x005 | resistors | HB mini |
-| 0x006 | resistors |     |
+| 0x006 | resistors | RESERVED DRONECODE |
 | 0x007 | resistors | Read Version from EEPROM |
 | 0x008 | resistors | Skynode QS with USB |
 | 0x009 | resistors | Auterion Skynode base RC9 & older (no usb) |
@@ -121,3 +193,4 @@ HWTYPE = {v5/6x}{VER}{REV}
 | 0x009 | resistors |     |
 | 0x00a | resistors |     |
 | 0x010 | EEPROM | Auterion FMUv6x 0.6.0  |
+
