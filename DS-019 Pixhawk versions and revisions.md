@@ -80,7 +80,7 @@ Once the requested Board ID has been accepted and the PR has been merged, the Pi
 The Pixhawk SIG team will send manufacturers the following files:
 
 * `[manufacturer name]-[board name]-[base|imu]-[0xnnnn].bin` is an application that programs the EEPROM
-* `[manufacturer name]-[board name]-[base|imu]-[0x0000].jlink` is an automation script to program and run the bin file on the target
+* `[manufacturer name]-[board name]-[base|imu]-[0xnnnn].jlink` is an automation script to program and run the bin file on the target
 
 With these files manufacturers will be capable of setting the Board ID to the requested value. There are two ways to do this, we noted both options below with detailed instructions, we recommend to use the one that fits your production workflow best.
 
