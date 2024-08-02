@@ -1,4 +1,4 @@
-# DS-019 Pixhawk standard versions and revisions
+# DS-020 Pixhawk standard versions and revisions
 ## Background
 With the introduction of the Pixhawk FMUv5x and FMUv6x standard, versioning of boards and ensuring intercompatibility has become both a major feature as well as a challenge. To comply with the standard, both software maintainers as well as hardware manufacturers must agree to follow the same guidelines. This page is the central place where versions and revisions of Pixhawk FMUs are tracked and managed.
 
@@ -150,7 +150,7 @@ HWTYPE = {v5/6x}{VER}{REV}
 | 0x003 | resistors | NXP T1 PHY |
 | 0x004 | resistors | HB CM4 |
 | 0x005 | resistors | HB mini |
-| 0x006 | resistors | RESERVED DRONECODE |
+| 0x006 | resistors | ZeroOne X6 |
 | 0x007 | resistors | Read Version from EEPROM |
 | 0x008 | resistors | Skynode QS with USB |
 | 0x009 | resistors | Auterion Skynode base RC9 & older (no usb) |
