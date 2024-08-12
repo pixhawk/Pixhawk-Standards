@@ -150,7 +150,7 @@ HWTYPE = {v5/6x}{VER}{REV}
 | 0x003 | resistors | NXP T1 PHY |
 | 0x004 | resistors | HB CM4 |
 | 0x005 | resistors | HB mini |
-| 0x006 | resistors | ZeroOne X6 |
+| 0x006 | resistors | RESERVED DRONECODE |
 | 0x007 | resistors | Read Version from EEPROM |
 | 0x008 | resistors | Skynode QS with USB |
 | 0x009 | resistors | Auterion Skynode base RC9 & older (no usb) |
@@ -158,6 +158,7 @@ HWTYPE = {v5/6x}{VER}{REV}
 | 0x010 | EEPROM | Auterion Skynode RC10, RC11, RC12, RC13 |
 | 0x011 | EEPROM | Auterion Skynode Lite RC13 |
 | 0x100 | EEPROM | Holybro Pixhawk Jetson Baseboard |
+| 0x150 | EEPROM | ZeroOne X6 Baseboard |
 
 ### FMU v5x revisions
 
