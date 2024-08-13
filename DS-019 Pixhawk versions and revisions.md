@@ -158,7 +158,7 @@ HWTYPE = {v5/6x}{VER}{REV}
 | 0x010 | EEPROM | Auterion Skynode RC10, RC11, RC12, RC13 |
 | 0x011 | EEPROM | Auterion Skynode Lite RC13 |
 | 0x100 | EEPROM | Holybro Pixhawk Jetson Baseboard |
-| 0x150 | EEPROM | ZeroOne X6 Baseboard |
+| 0x110 | EEPROM | ZeroOne X6 Baseboard |
 
 ### FMU v5x revisions
 
