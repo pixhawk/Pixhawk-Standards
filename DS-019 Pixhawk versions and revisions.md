@@ -1,4 +1,4 @@
-# DS-020 Pixhawk standard versions and revisions
+# DS-019 Pixhawk standard versions and revisions
 ## Background
 With the introduction of the Pixhawk FMUv5x and FMUv6x standard, versioning of boards and ensuring intercompatibility has become both a major feature as well as a challenge. To comply with the standard, both software maintainers as well as hardware manufacturers must agree to follow the same guidelines. This page is the central place where versions and revisions of Pixhawk FMUs are tracked and managed.
 
