@@ -160,6 +160,7 @@ HWTYPE = {v5/6x}{VER}{REV}
 | 0x100 | EEPROM | Holybro Pixhawk Jetson Baseboard |
 | 0x150 | EEPROM | ZeroOne X6 Baseboard |
 | 0x200 | EEPROM | Amovlab ICF6 Baseboard |
+| 0x250 | EEPROM | YARI PAB Carrier Board |
 
 ### FMU v5x revisions
 
@@ -196,4 +197,5 @@ HWTYPE = {v5/6x}{VER}{REV}
 | 0x009 | resistors |     |
 | 0x00a | resistors |     |
 | 0x010 | EEPROM | Auterion FMUv6x 0.6.0  |
+| 0x250 | EEPROM | YARI V6X |
 
